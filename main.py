@@ -28,8 +28,8 @@ async def start_handler(_, event: Message):
 	await event.reply_photo("https://telegra.ph/file/165941ae764a56d6d9c89.jpg",
                                 caption=Config.START_MSG.format(event.from_user.mention),
                                 reply_markup=InlineKeyboardMarkup([
-                                    [InlineKeyboardButton("Our Channel", url="https://t.me/iP_Movies"),
-                                     InlineKeyboardButton("Our Group", url="https://t.me/iPopcornMovieGroup")],
+                                    [InlineKeyboardButton("Our Channel", url="https://t.me/cyniteMovies"),
+                                     InlineKeyboardButton("Our Group", url="https://t.me/+mPPk2AUcTPhhY2Q1")],
                                     [InlineKeyboardButton("Help", callback_data="Help_msg"),
                                      InlineKeyboardButton("About", callback_data="About_msg")]]))
 
@@ -38,8 +38,8 @@ async def help_handler(_, event: Message):
 
     await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/iP_Movies"),
-             InlineKeyboardButton("Our Group", url="https://t.me/iPopcornMovieGroup"), 
+            [InlineKeyboardButton("Our Channel", url="https://t.me/cyniteMovies"),
+             InlineKeyboardButton("Our Group", url="https://t.me/+mPPk2AUcTPhhY2Q1"), 
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
