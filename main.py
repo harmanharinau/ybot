@@ -49,6 +49,11 @@ async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
     answers = f'**📂 Results For ➠ {event.text} \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result.🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
+     reply_markup=InlineKeyboardMarkup([
+                                    [InlineKeyboardButton("Our Channel", url="https://t.me/iP_Movies"),
+                                     InlineKeyboardButton("Our Group", url="https://t.me/iPopcornMovieGroup")],
+                                    [InlineKeyboardButton("Help", callback_data="Help_msg"),
+                                     InlineKeyboardButton("About", callback_data="About_msg")]]))
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
